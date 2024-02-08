@@ -6,7 +6,8 @@ from tensorflow.keras.optimizers import Adam
 from Data import *
 from Evaluation import net_evaluation
 
-
+# Get Encoder and Decoder sourcecode from https://github.com/VidushiBhatia/U-Net-Implementation/blob/main/U_Net_for_Image_Segmentation_From_Scratch_Using_TensorFlow_v4.ipynb
+# from this side and get attention block from this side -> https://www.kaggle.com/code/truthisneverlinear/attention-u-net-pytorch
 def AttnBlock2D(x, g, inter_channel, data_format='channels_first'):
     theta_x = Conv2D(inter_channel, [1, 1], strides=[1, 1], data_format=data_format)(x)
 
